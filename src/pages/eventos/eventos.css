@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Estilos para a LISTA de Eventos --- */
+.eventos-list-container {
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.eventos-list-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.eventos-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.eventos-list-container th,
+.eventos-list-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.eventos-list-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* --- Estilos para a PÁGINA DE DETALHES de Evento --- */
+.evento-detail-container {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 700px;
+    margin: 20px auto;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.evento-detail-container h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.evento-detail-container p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.evento-detail-container p strong {
+    display: inline-block;
+    min-width: 160px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.evento-detail-container a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 18px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.95em;
+    border: none;
+    cursor: pointer;
+}
+
+.evento-detail-container a:hover {
+    background-color: #2980b9;
+}
+
+.evento-detail-container a[href="/eventos"] {
+    background-color: #7f8c8d;
+    margin-left: 10px;
+}
+
+.evento-detail-container a[href="/eventos"]:hover {
+    background-color: #6c7a7d;
+}
+
+.evento-detail-container .loading-message,
+.evento-detail-container .error-message,
+.evento-detail-container .not-found-message {
+    text-align: center;
+    padding: 30px;
+    font-style: italic;
+    color: #888;
+    font-size: 1.1em;
+}
+
+/* --- Estilos para o FORMULÁRIO de Evento --- */
+.evento-form-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+.evento-form-container h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.evento-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.evento-form-container label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.evento-form-container input,
+.evento-form-container textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.evento-form-container button {
+    width: fit-content;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.evento-form-container button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+}
+
+.evento-form-container button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.evento-form-container button[type="button"] {
+    background-color: #e74c3c;
+    color: white;
+    margin-left: 10px;
+}
+
+.evento-form-container button[type="button"]:hover {
+    background-color: #c0392b;
+}
