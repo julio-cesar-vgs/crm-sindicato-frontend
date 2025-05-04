@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.app-container {
+    display: flex; /* Usa Flexbox para o layout principal */
+    min-height: 100vh; /* Garante que o container ocupe a altura total da viewport */
+}
+
+.sidebar-menu {
+    width: 200px; /* Largura da barra lateral */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content-area {
+    flex-grow: 1; /* Ocupa o espaço restante */
+    padding: 20px;
+}

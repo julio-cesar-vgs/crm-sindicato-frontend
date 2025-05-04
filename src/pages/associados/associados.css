@@ -1,0 +1,105 @@
+/* src/pages/Associados/associados.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* --- Estilos para a LISTA (já existentes) --- */
+.associados-list-container {
+    padding: 20px;
+    font-family: sans-serif; /* Exemplo: definir uma fonte base */
+}
+
+.associados-list-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.associados-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.associados-list-container th,
+.associados-list-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.associados-list-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* --- Novos Estilos para a PÁGINA DE DETALHES --- */
+.associado-detail-container {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 700px; /* Limita a largura para melhor leitura */
+    margin: 20px auto; /* Centraliza o container na página */
+    font-family: sans-serif; /* Garante a mesma fonte */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.associado-detail-container h2 {
+    color: #2c3e50; /* Cor mais escura para o título */
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.associado-detail-container p {
+    margin-bottom: 12px;
+    line-height: 1.6; /* Melhora a legibilidade */
+    color: #555; /* Cor do texto */
+}
+
+.associado-detail-container p strong {
+    display: inline-block; /* Permite definir largura */
+    min-width: 160px; /* Alinha os valores */
+    color: #333; /* Destaca os rótulos */
+    margin-right: 10px;
+}
+
+/* Estilos para os links/botões */
+.associado-detail-container a {
+    display: inline-block; /* Para aplicar padding e margin corretamente */
+    margin-top: 25px;
+    padding: 10px 18px;
+    background-color: #3498db; /* Azul */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.95em;
+    border: none; /* Remove borda padrão de link */
+    cursor: pointer;
+}
+
+.associado-detail-container a:hover {
+    background-color: #2980b9; /* Azul mais escuro no hover */
+}
+
+/* Estilo específico para o botão/link "Voltar" */
+.associado-detail-container a[href="/associados"] {
+    background-color: #7f8c8d; /* Cinza */
+    margin-left: 10px; /* Espaçamento herdado do style inline, mas pode ser definido aqui */
+}
+
+.associado-detail-container a[href="/associados"]:hover {
+    background-color: #6c7a7d; /* Cinza mais escuro no hover */
+}
+
+/* Estilos para mensagens de loading/error (opcional, mas útil) */
+.associado-detail-container .loading-message,
+.associado-detail-container .error-message,
+.associado-detail-container .not-found-message {
+    text-align: center;
+    padding: 30px;
+    font-style: italic;
+    color: #888;
+    font-size: 1.1em;
+}
