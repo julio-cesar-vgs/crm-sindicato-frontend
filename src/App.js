@@ -3,14 +3,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import Home from './pages/Home';
 
-// import InteracoesList from './pages/Interacoes/InteracoesList';
-// import InteracoesForm from './pages/Interacoes/InteracoesForm';
-// import ContribuicoesList from './pages/Contribuicoes/ContribuicoesList';
-// import ContribuicoesDetail from './pages/Contribuicoes/ContribuicoesDetail';
-// import ContribuicoesForm from './pages/Contribuicoes/ContribuicoesForm';
-// import NotFound from './pages/NotFound';
+import InteracoesList from './pages/Interacoes/InteracoesList';
+import InteracoesForm from './pages/Interacoes/InteracoesForm';
+import ContribuicoesList from './pages/Contribuicoes/ContribuicoesList';
+import ContribuicoesDetail from './pages/Contribuicoes/ContribuicoesDetail';
+import ContribuicoesForm from './pages/Contribuicoes/ContribuicoesForm';
+import NotFound from './pages/NotFound/NotFound';
 import './styles/layout.css';
-import AssociadosDetail from "./pages/associados/AssociadosDetail";
+import AssociadosDetail from "./pages/associados/AssociadosDetail"; 
 import AssociadosList from "./pages/associados/AssociadosList";
 import AssociadosForm from "./pages/associados/AssociadosForm";
 import EventosList from "./pages/eventos/EventosList";
@@ -51,17 +51,17 @@ function App() {
               <Route path="/participacao" element={<ParticipacoesList />} />
               <Route path="/participacao/new" element={<ParticipacoesForm />} />
                {/* Participacao não tem endpoint de detalhe ou edição individual no seu backend */}
-
-              {/*<Route path="/interacoes" element={<InteracoesList />} />*/}
-              {/*<Route path="/interacoes/new" element={<InteracoesForm />} />*/}
-              {/* /!* Interacao não tem endpoint de detalhe ou edição individual no seu backend *!/*/}
-
-              {/*<Route path="/contribuicoes" element={<ContribuicoesList />} />*/}
-              {/*<Route path="/contribuicoes/:id" element={<ContribuicoesDetail />} />*/}
-              {/*<Route path="/contribuicoes/new" element={<ContribuicoesForm />} />*/}
-              {/*<Route path="/contribuicoes/edit/:id" element={<ContribuicoesForm />} />*/}
-
-              {/*<Route path="*" element={<NotFound />} /> /!* Rota para página não encontrada *!/*/}
+              
+              <Route path="/interacoes" element={<InteracoesList />} />
+              <Route path="/interacoes/new" element={<InteracoesForm />} />
+              {/* /* Interacao não tem endpoint de detalhe ou edição individual no seu backend */}
+              
+              <Route path="/contribuicoes" element={<ContribuicoesList />} />
+              <Route path="/contribuicoes/:id" element={<ContribuicoesDetail />} />
+              <Route path="/contribuicoes/new" element={<ContribuicoesForm />} />
+              <Route path="/contribuicoes/edit/:id" element={<ContribuicoesForm />} />
+              
+              <Route path="*" element={<NotFound />} /> {/* Rota para página não encontrada */}
             </Routes>
           </main>
         </div>
