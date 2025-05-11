@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import Home from './pages/Home';
 
+import Dashboard from './pages/Dashboard'; // Importe o componente Dashboard
 // Importa os componentes de Interações do novo diretório
 import InteracoesList from './pages/interacoes/InteracoesList';
 import InteracoesForm from './pages/interacoes/InteracoesForm';
@@ -39,7 +40,7 @@ function App() {
           </nav>
           <main className="content-area">
             <Routes>
-              {/*<Route path="/" element={<Home />} />*/}
+ <Route path="/" element={<Dashboard />} /> {/* Rota para o Dashboard */}
               <Route path="/associados" element={<AssociadosList />} />
               <Route path="/associados/:id" element={<AssociadosDetail />} />
               <Route path="/associados/new" element={<AssociadosForm />} />
