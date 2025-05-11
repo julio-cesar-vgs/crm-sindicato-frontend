@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import Home from './pages/Home';
 
 import InteracoesList from './pages/Interacoes/InteracoesList';
-import InteracoesForm from './pages/Interacoes/InteracoesForm';
-import ContribuicoesList from './pages/Contribuicoes/ContribuicoesList';
-import ContribuicoesDetail from './pages/Contribuicoes/ContribuicoesDetail';
-import ContribuicoesForm from './pages/Contribuicoes/ContribuicoesForm';
+import InteracoesForm from './pages/interacoes/InteracoesForm';
+import ContribuicoesList from './pages/contribuicoes/ContribuicoesList';
+import ContribuicoesDetail from './pages/contribuicoes/ContribuicoesDetail';
+import ContribuicoesForm from './pages/contribuicoes/ContribuicoesForm';
 import NotFound from './pages/NotFound/NotFound';
 import './styles/layout.css';
 import AssociadosDetail from "./pages/associados/AssociadosDetail"; 
