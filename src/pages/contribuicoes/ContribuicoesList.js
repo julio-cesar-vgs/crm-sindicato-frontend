@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { listContribuicoes } from '../api/contribuicoes';
-import '../styles/layout.css'; // Assuming shared layout styles
-import './contribuicoes.css'; // Specific styles for contribuicoes
+import './contribuicoes.css';
+import {listContribuicoes} from "../../api/contribuicoes"; // Specific styles for contribuicoes
 
 function ContribuicoesList() {
     const [contribuicoes, setContribuicoes] = useState([]);

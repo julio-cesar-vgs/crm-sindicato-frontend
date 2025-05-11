@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getContribuicao, createContribuicao, updateContribuicao } from '../../api/contribuicoes';
 import '../../styles/layout.css';
+import {createContribuicao, getContribuicaoById, updateContribuicao} from "../../api/contribuicoes";
 
 function ContribuicoesForm() {
   const { id } = useParams();
@@ -17,7 +17,7 @@ function ContribuicoesForm() {
     if (id) {
       const fetchContribuicao = async () => {
         try {
-          const data = await getContribuicao(id);
+          const data = await getContribuicaoById(id);
           setContribuicao(data);
         } catch (error) {
           console.error('Error fetching contribuicao:', error);
