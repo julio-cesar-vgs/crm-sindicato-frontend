@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './dashboard.css';
-import Card from '../../components/Card'; // Import the Card component
+import Card from "../components/Card";
 
 const Dashboard = () => {
   const [counts, setCounts] = useState({
