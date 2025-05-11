@@ -3,8 +3,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import Home from './pages/Home';
 
-import InteracoesList from './pages/Interacoes/InteracoesList';
+// Importa os componentes de Interações do novo diretório
+import InteracoesList from './pages/interacoes/InteracoesList';
 import InteracoesForm from './pages/interacoes/InteracoesForm';
+
 import ContribuicoesList from './pages/contribuicoes/ContribuicoesList';
 import ContribuicoesDetail from './pages/contribuicoes/ContribuicoesDetail';
 import ContribuicoesForm from './pages/contribuicoes/ContribuicoesForm';
@@ -17,7 +19,7 @@ import EventosList from "./pages/eventos/EventosList";
 import EventosDetail from "./pages/eventos/EventosDetail";
 import EventosForm from "./pages/eventos/EventosForm";
 import ParticipacoesList from "./pages/participacao/ParticipacoesList";
-import ParticipacoesForm from "./pages/participacao/ParticipacoesForm";
+import ParticipacoesForm from "./pages/participacao/ParticipacoesForm"; // Certifique-se que esta importação está correta
 
 
 
@@ -51,8 +53,9 @@ function App() {
               <Route path="/participacao" element={<ParticipacoesList />} />
               <Route path="/participacao/new" element={<ParticipacoesForm />} />
                {/* Participacao não tem endpoint de detalhe ou edição individual no seu backend */}
-              
+
               <Route path="/interacoes" element={<InteracoesList />} />
+              {/* Remove ou comenta a rota antiga que importava de Interacoes/interacoes.js se existir */}
               <Route path="/interacoes/new" element={<InteracoesForm />} />
               {/* /* Interacao não tem endpoint de detalhe ou edição individual no seu backend */}
               
