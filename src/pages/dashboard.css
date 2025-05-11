@@ -1,0 +1,51 @@
+/* src/pages/dashboard.css */
+
+.dashboard-container {
+    padding: 40px 20px; /* More padding top/bottom */
+    max-width: 1000px; /* Slightly smaller max-width for better centering */
+    margin: 0 auto;
+    text-align: center; /* Center content within the container */
+}
+
+.dashboard-container h1 {
+    text-align: center;
+    margin-bottom: 40px; /* More space below title */
+    color: #333;
+    font-size: 2.5em;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax for slightly larger cards */
+    gap: 30px; /* Increase gap between cards */
+    justify-items: center; /* Center items in the grid */
+}
+
+.card {
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Slightly larger border radius */
+    padding: 30px; /* More padding inside card */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Stronger, softer shadow */
+    background-color: #fff;
+    cursor: pointer; /* Indicate that the card is clickable */
+    transition: transform 0.2s ease-in-out; /* Optional: Add hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Optional: Add hover effect */
+}
+
+.card h2 {
+    margin-top: 0; /* Ensure no extra space at the top */
+    margin-bottom: 10px; /* Space between title and count */
+    font-size: 1.5em; /* Larger title font */
+    color: #333;
+}
+
+.card p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff; /* Keep example color, or choose a primary color */
+    margin-bottom: 0;
+}
