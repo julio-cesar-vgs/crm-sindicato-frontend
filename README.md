@@ -1,70 +1,173 @@
-# Getting Started with Create React App
+# Sistema de Gestão de EPIs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sistema completo para controle de Equipamentos de Proteção Individual (EPIs) desenvolvido com Next.js, TypeScript e NextUI.
 
-## Available Scripts
+## 📋 Funcionalidades
 
-In the project directory, you can run:
+### 🎯 Dashboard
+- Visão geral do sistema com estatísticas
+- EPIs disponíveis, emprestados e vencidos
+- Resumo de transações recentes
 
-### `npm start`
+### 📦 Gestão de EPIs
+- **Entrada**: Cadastro de novos EPIs no sistema
+- **Saída/Empréstimo**: Registro de entrega para funcionários
+- **Devolução**: Controle de retorno com verificação de prazo e condição
+- **Estoque**: Visualização completa do inventário
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 👥 Funcionários
+- Cadastro e gerenciamento de funcionários
+- Associação com setores e cargos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📊 Relatórios
+- Relatórios de movimentação por período
+- EPIs por setor e tipo
+- Controle de vencimentos e atrasos
+- Exportação de dados
 
-### `npm test`
+### ⚙️ Configurações
+- Backup e restauração de dados
+- Configurações de notificações
+- Manutenção do sistema
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Como Executar
 
-### `npm run build`
+### Pré-requisitos
+- Node.js 18+ 
+- NPM ou Yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Instalação
+```bash
+# Clone o repositório (se aplicável)
+git clone <repository-url>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Entre no diretório
+cd epi-system
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Instale as dependências
+npm install
 
-### `npm run eject`
+# Execute em modo de desenvolvimento
+npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+O sistema estará disponível em `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build para Produção
+```bash
+npm run build
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🏗️ Estrutura do Projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── app/                    # Páginas Next.js (App Router)
+│   ├── entrada/           # Cadastro de EPIs
+│   ├── saida/             # Empréstimo de EPIs
+│   ├── devolucao/         # Devolução de EPIs
+│   ├── estoque/           # Inventário
+│   ├── funcionarios/      # Gestão de funcionários
+│   ├── relatorios/        # Relatórios e estatísticas
+│   └── configuracoes/     # Configurações do sistema
+├── components/            # Componentes React
+│   ├── MainLayout.tsx     # Layout principal
+│   └── Sidebar.tsx        # Menu lateral
+├── context/               # Context API
+│   └── EPIContext.tsx     # Estado global dos EPIs
+├── types/                 # Definições TypeScript
+│   └── epi.ts            # Tipos de dados
+└── utils/                 # Utilitários
+    ├── constants.ts       # Constantes do sistema
+    └── validations.ts     # Funções de validação
+```
 
-## Learn More
+## 📊 Modelo de Dados
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### EPI (Equipamento de Proteção Individual)
+- Código único
+- Nome e descrição
+- Tipo (capacete, luvas, etc.)
+- Status (disponível, emprestado, manutenção, baixado)
+- Condição (novo, bom, regular, ruim, inutilizado)
+- Data de validade
+- Certificado/CA
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Transações
+- Tipo (entrada, saída, devolução)
+- Data da transação
+- Responsável pela operação
+- Setor
+- Prazo de devolução (se aplicável)
+- Indicador de entrega permanente
+- Condição na saída/devolução
 
-### Code Splitting
+### Funcionários
+- Nome completo
+- CPF
+- Setor e cargo
+- Email (opcional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔧 Tecnologias Utilizadas
 
-### Analyzing the Bundle Size
+- **Next.js 15** - Framework React
+- **TypeScript** - Tipagem estática
+- **NextUI** - Biblioteca de componentes
+- **Tailwind CSS** - Estilização
+- **Lucide React** - Ícones
+- **date-fns** - Manipulação de datas
+- **Framer Motion** - Animações
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 💾 Armazenamento
 
-### Making a Progressive Web App
+O sistema utiliza LocalStorage para persistência de dados no navegador. Em um ambiente de produção, seria recomendado integrar com um banco de dados real.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🎨 Interface
 
-### Advanced Configuration
+- Design responsivo para desktop e mobile
+- Tema claro/escuro automático
+- Interface intuitiva com navegação lateral
+- Feedback visual para todas as ações
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📋 Principais Recursos
 
-### Deployment
+### Controle de Prazos
+- Verificação automática de atraso na devolução
+- Alertas visuais para EPIs vencidos
+- Relatórios de vencimento
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Validações
+- Campos obrigatórios em formulários
+- Validação de CPF
+- Verificação de disponibilidade de EPIs
 
-### `npm run build` fails to minify
+### Rastreabilidade
+- Histórico completo de transações
+- Identificação de responsáveis
+- Registro de condições dos equipamentos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🚧 Melhorias Futuras
+
+- Integração com banco de dados
+- Notificações por email/SMS
+- Relatórios em PDF
+- API REST para integração
+- Códigos de barras/QR Code
+- Dashboard analytics avançado
+
+## 📝 Como Usar
+
+1. **Cadastrar EPIs**: Use o menu "Cadastro de EPI" para adicionar novos equipamentos
+2. **Registrar Saída**: Em "Empréstimo/Saída", registre a entrega para funcionários
+3. **Fazer Devolução**: Use "Devolução" para registrar o retorno dos EPIs
+4. **Consultar Estoque**: Visualize todo o inventário em "Estoque de EPIs"
+5. **Ver Relatórios**: Acesse relatórios e estatísticas em "Relatórios"
+
+## 🤝 Contribuições
+
+Este é um sistema base que pode ser expandido conforme necessidades específicas da empresa.
+
+---
+
+**Desenvolvido com Next.js + NextUI para gestão eficiente de EPIs** 🛡️
